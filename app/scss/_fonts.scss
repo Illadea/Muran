@@ -1,0 +1,62 @@
+/*Montserrat*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Light.woff2") format('woff2'),
+       url("../fonts/Montserrat/Montserrat-Light.woff") format('woff'),
+       url("../fonts/Montserrat/Montserrat-Light.ttf") format('ttf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.woff2") format('woff2'),
+       url("../fonts/Montserrat/Montserrat-Regular.woff") format('woff'),
+       url("../fonts/Montserrat/Montserrat-Regular.ttf") format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Bold.woff2") format('woff2'),
+       url("../fonts/Montserrat/Montserrat-Bold.woff") format('woff'),
+       url("../fonts/Montserrat/Montserrat-Bold.ttf") format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*Gotham Pro*/
+@font-face {
+  font-family: 'GothamPro';
+  src: url("../fonts/GothamPro/GothamPro.woff2") format('woff2'),
+       url("../fonts/GothamPro/GothamPro.woff") format('woff'),
+       url("../fonts/GothamPro/GothamPro.ttf") format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url("../fonts/GothamPro/GothamPro-Bold.woff2") format('woff2'),
+       url("../fonts/GothamPro/GothamPro-Bold.woff") format('woff'),
+       url("../fonts/GothamPro/GothamPro-Bold.ttf") format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: url("../fonts/GothamPro/GothamPro-Black.woff2") format('woff2'),
+       url("../fonts/GothamPro/GothamPro-Black.woff") format('woff'),
+       url("../fonts/GothamPro/GothamPro-Black.ttf") format('ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

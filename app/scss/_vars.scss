@@ -1,0 +1,56 @@
+@import "fonts";
+
+/*Montserrat font*/
+%Montserrat-Light {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+%Montserrat-Regular {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+%Montserrat-Bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+
+/*Gotham Pro font*/
+
+%GothamPro-Regular {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 400;
+}
+
+%GothamPro-Bold {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 700;
+}
+
+%GothamPro-Black {
+  font-family: 'GothamPro', sans-serif;
+  font-weight: 900;
+}
+
+// Colors
+%white {
+  color: #FFFFFF;
+}
+
+%black {
+  color: #372821;
+}
+
+%grey {
+  color: #F2F2F2;
+}
+
+%grey_light {
+  color: #888888;
+}
+
+%grey_intensive {
+  color: #F2EFEB;
+}
