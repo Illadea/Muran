@@ -9,6 +9,12 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background: #fff;
+  font-size: 18px;
+  @extend %black;
+  @extend %GothamPro-Regular;
+}
 
 a {
   text-decoration: none;
@@ -38,11 +44,48 @@ h1 {
   line-height: 141.4%;
 }
 
-body {
-  background: #fff;
-  font-size: 18px;
-  @extend %black;
-  @extend %GothamPro-Regular;
+h2 {
+  font-size: 59px;
+  @extend %GothamPro-Black;
+  line-height: 125.4%;
+  position: relative;
+  display: inline-block;
+  &::before{
+    content:'';
+    width: 2px;
+    height: 67px;
+    background: #372821;
+    position: absolute;
+    top: -113%;
+    left: 12%;
+  }
+  &::after{
+    content:'';
+    width: 67px;
+    height: 2px;
+    background: #372821;
+    position: absolute;
+    bottom: 38%;
+    right: -18.5%;
+  }
+}
+
+.subtitle-h2 {
+  float: right;
+  font-size: 20px;
+  @extend %GothamPro-Bold;
+  position: relative;
+  margin-right: 60px;
+  &:before {
+    content:url(../images/title-h2-decoraion.svg);
+    position: absolute;
+    z-index: -1;
+    top: -30px;
+    right: 30px;
+  }
+  & span {
+    margin-right: 51px;
+  }
 }
 
 .container {
@@ -56,18 +99,23 @@ body {
   background-color:#fff;
   border: 1px solid #372821;
   cursor: pointer;
+  position: relative;
   &::before {
-    content:url(../images/arrow-down.svg);
-    position: relative;
-    top: 0;
-    top: 51px;
-    right: 36px;
-    width: 20px;
-    display: inline-block;
-    background-color:#fff;
+    content:"";
+    position: absolute;
+    width: 39px;
+    height: 1px;
+    left: 14px;
+    top: 54px;
+    background-color: #fff;
   }
-  &:hover {
-    background: #F2F2F2;
-    transition: 0.3s;
+  &::after{
+    content: url(../images/arrow-down.svg);
+    position: absolute;
+    left: 25px;
+    top: 24px;
+  }
+  &:focus {
+    outline: none;
   }
 }
