@@ -109,12 +109,6 @@ h2 {
     top: 54px;
     background-color: #fff;
   }
-  &::after{
-    content: url(../images/arrow-down.svg);
-    position: absolute;
-    left: 25px;
-    top: 24px;
-  }
   &:focus {
     outline: none;
   }

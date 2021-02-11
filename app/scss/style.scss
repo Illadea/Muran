@@ -7,6 +7,10 @@
 //////////////////////// HEADER ////////////////////////
 
 .header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
   &__inner {
     display: flex;
     align-items: center;
@@ -27,7 +31,6 @@
   &__search { 
     position: relative;
     margin-left: -60px;
-    cursor: pointer;
     &::after {
       content: url(../images/search.svg);
       background-repeat: no-repeat;
@@ -73,23 +76,35 @@
 
 .menu {
   background: #F2EFEB;
-  margin-bottom: 42px;
   &__list {
     display: flex;
     justify-content: center;
     &-item {
       padding: 20px 57px;
+      border-bottom: 3px solid #F2EFEB;
+      &:hover {
+        border-bottom: 3px solid #372821;
+        transition: 0.5s;
+      }
     }
   }
 }
 
 
-//////////////////////// 1-st section ////////////////////////
+//////////////////////// MAIN section ////////////////////////
+.main {
+  padding-top: 130px;
+}
 .first-screen {
-  background-image: url(../images/main-slider.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  &__container {
+    max-width: 1223px;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-image: url(../images/main-slider.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 66%;
+  }
   &__inner {
     max-width: 548px;
     padding-top: 244px;
@@ -108,11 +123,19 @@
       left: 50%;
     }
   }
+  &__btn {
+    &::after{
+      content: url(../images/arrow-down.svg);
+      position: absolute;
+      left: 25px;
+      top: 24px;
+    }
+  }
 }
 
 
 
-//////////////////////// 2-d section ////////////////////////
+//////////////////////// 1-st section ////////////////////////
 .categories {
   padding-top: 207px;
   padding-bottom: 149px;
@@ -134,13 +157,6 @@
     ". . spicy"
     ". . .";
   & .spicy {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      ". . ."
-      ". . .";
     grid-area: spicy;
     &:after {
       content: '';
@@ -205,6 +221,93 @@
     }
   }  
 }
+//////////////////////// 2-d section ////////////////////////
+
+
+
+//////////////////////// 3-d section ////////////////////////
+.top-category {
+  &__title-h2 {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 126px;
+  }
+}
+
+
+.grid-item-a { grid-area: grid-item-a; }
+.grid-item-b { grid-area: grid-item-b; }
+.grid-item-d { grid-area: grid-item-d; }
+.grid-item-f { grid-area: grid-item-f; }
+.grid-item-c { grid-area: grid-item-c; }
+
+
+.top-products-list  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 50px 65px;
+  grid-template-areas:
+    "grid-item-a grid-item-b grid-item-c"
+    "grid-item-a grid-item-b grid-item-c"
+    "grid-item-a grid-item-d grid-item-f"
+    ". grid-item-d grid-item-f";
+  &__item {
+    &-image {
+      border: 1px solid #EDEDED;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden; 
+      &:after {
+        content: '';
+        position: absolute; 
+        top: 100%; 
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/top-product-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 120%;
+        transition: 0.5s;
+        z-index: -1;
+      }
+      &:hover:after{    
+         top: 0px;
+       }
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    &-title {
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 141.4%;
+      letter-spacing: 0.03em;
+    }
+    &-price {
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 141.4%;
+      letter-spacing: 0.03em;
+    }
+    &-btn {
+      &::after{
+        content: url(../images/cart.svg);
+        position: absolute;
+        left: 23px;
+        top: 44px;
+      }
+    }
+  }
+}
+
 
 
 //////////////////////// FOOTER ////////////////////////
