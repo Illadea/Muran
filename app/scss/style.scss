@@ -22,9 +22,12 @@
     width: 19px;
     height: 20px;
     cursor: pointer;
+    margin-left: 8px;
   }
   &__search { 
     position: relative;
+    margin-left: -60px;
+    cursor: pointer;
     &::after {
       content: url(../images/search.svg);
       background-repeat: no-repeat;
@@ -46,6 +49,7 @@
     font-size: 14px;
     line-height: 15px;
     padding: 4px 10px ;
+    cursor: pointer;
     &:focus {
       outline: none;
     }
@@ -61,7 +65,7 @@
     background-repeat: no-repeat;
     cursor: pointer;
     white-space: nowrap;
-    padding-left: 35px;
+    padding-left: 41px;
     line-height: 22px;
     @extend %Montserrat-Regular;
   }
@@ -71,16 +75,33 @@
   background: #F2EFEB;
   &__list {
     display: flex;
-    max-width: 773px;
-    margin: 0 auto;
+    justify-content: center;
     &-item {
-      padding: 20px 50px;
-      // &:first-child {
-      //   padding-left: 0;
-      // }
-      // &:last-child {
-      //   padding-right: 0;
-      // }
+      padding: 20px 57px;
+    }
+  }
+}
+
+.first-screen {
+  background-image: url(../images/main-slider.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  &__inner {
+    max-width: 548px;
+    padding-top: 244px;
+    padding-bottom: 94px;
+  }
+  &__title{
+    margin-bottom: 82px;
+    &::after {
+      content:'';
+      width: 168px;
+      height: 2px;
+      background: #372821;
+      position: absolute;
+      bottom: -2%;
+      left: 33.5%;
     }
   }
 }
