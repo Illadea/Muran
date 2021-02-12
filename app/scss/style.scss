@@ -5,7 +5,9 @@
 
 
 //////////////////////// HEADER ////////////////////////
-
+#header {
+  transition: top 0.3s;
+}
 .header {
   position: fixed;
   z-index: 2;
@@ -76,16 +78,50 @@
 
 .menu {
   background: #F2EFEB;
+  @extend %Montserrat-Regular;
   &__list {
     display: flex;
     justify-content: center;
     &-item {
-      padding: 20px 57px;
-      border-bottom: 3px solid #F2EFEB;
+      border-top: 3px solid #F2EFEB;
+      max-width: 210px;
+      & a {
+        padding: 20px 50px;
+        display: inline-block;
+      }
       &:hover {
-        border-bottom: 3px solid #372821;
+        border-top: 3px solid #372821;
         transition: 0.5s;
       }
+    }
+  }
+  &__sublist {
+    position: absolute;
+    background-color: #fff;
+    top: 60px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+    min-width: 208px;
+    display: none;
+    letter-spacing: 0.02rem;
+    & li {
+      &:hover{
+        background: #F8F8F8;
+        @extend %Montserrat-Bold;
+      }
+      & a {
+        display: block;
+        padding: 20px 0 20px 35px;
+      }
+    }
+  }
+  &__sublist-link {
+    position: relative;
+    display: inline-block;
+    &:hover .menu__sublist {
+      display: block;
+    }
+    &:hover {
+      background: #fff;
     }
   }
 }
@@ -298,11 +334,23 @@
       letter-spacing: 0.03em;
     }
     &-btn {
-      &::after{
+      &::after  {
         content: url(../images/cart.svg);
         position: absolute;
         left: 23px;
         top: 44px;
+      }
+    }
+    &-btn-all-products {
+      border-left: none;
+      &::after {
+        content: url(../images/arrow-right.svg);
+        position: absolute;
+        left: -11px;
+        top: 14px;
+      }
+      &::before {
+        content: none;
       }
     }
   }

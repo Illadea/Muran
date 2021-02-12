@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   </head>
 <body>
-<header class="header">
+<header class="header" id="header">
 <div class="header__inner">
   <div class="header__cart"></div>
   <div class="header__search">
@@ -33,20 +33,20 @@
   <div class="header__phone"><a href="tel:+38 0999471923">+38 099 947 19 23</a></div>
 </div>
 <nav class="menu">
-  <div class="menu__list">
-    <div class="menu__list-item">
-      <a href="">Категории</a>
-    </div>
-    <div class="menu__list-item">
-      <a href="">Продукция</a>
-    </div>
-    <div class="menu__list-item">
-      <a href="">Контакты</a>
-    </div>
-    <div class="menu__list-item">
-      <a href="">Доставка</a>
-    </div>
-  </div>
+  <ul class="menu__list">
+    <li class="menu__list-item  menu__sublist-link"><a href="">Категории</a>
+      <ul class="menu__sublist">
+        <li><a href="#">BALANCY</a></li>
+        <li><a href="#">PURIFY</a></li>
+        <li><a href="#">ENERGY</a></li>
+        <li><a href="#">HEALTHY</a></li>
+        <li><a href="#">SERENITY</a></li>
+    </ul>
+    </li>
+    <li class="menu__list-item"><a href="">Продукция</a></li>
+    <li class="menu__list-item"><a href="">Контакты</a></li>
+    <li class="menu__list-item"><a href="">Доставка</a></li>
+  </ul>
 </nav>
 </header>
 <main class="main">
@@ -133,7 +133,7 @@
           <div class="top-products-list__item-title">SHAMPOO 50</div>
           <div class="top-products-list__item-price">134$</div>
         </div>
-        <button class="btn top-products-list__item-btn">В корзину</button>
+        <button class="btn top-products-list__item-btn-all-products">Все товары</button>
       </div>
       <div class="top-products-list__item grid-item-b">
         <div class="top-products-list__item-image">
@@ -177,7 +177,6 @@
       </div>
     </div>
   </div> 
-
 </section>
 </main>
 <footer class="footer">

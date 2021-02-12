@@ -28,6 +28,17 @@ li {
   padding: 0;
 }
 
+li > a:after { 
+  content: url(../images/list-decoration.svg);
+  position: relative;
+  top: -4px;
+  right: -23px;
+}
+
+li > a:only-child:after { 
+  content: ''; 
+}
+
 h1,
 h2,
 h3,
