@@ -133,18 +133,22 @@
 }
 .first-screen {
   &__container {
-    max-width: 1223px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 30px;
-    background-image: url(../images/main-slider.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 66%;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  &__image {
+    width: 80%;
   }
   &__inner {
     max-width: 548px;
     padding-top: 244px;
     padding-bottom: 94px;
+    position: absolute;
+    left: 0;
   }
   &__title h1 {
     margin-bottom: 82px;
@@ -282,11 +286,40 @@
 }
 
 
-.grid-item-a { grid-area: grid-item-a; }
-.grid-item-b { grid-area: grid-item-b; }
-.grid-item-d { grid-area: grid-item-d; }
-.grid-item-f { grid-area: grid-item-f; }
-.grid-item-c { grid-area: grid-item-c; }
+.grid-item-a { 
+  grid-area: grid-item-a;
+  position: relative;
+  &::before {
+    content: '';
+    height: 86.3%;
+    width: 1px;
+    background-color: #372821;
+    position: absolute;
+    left: -44px;
+    top: 65px;
+  }
+  &::after {
+    content: '';
+    height: 1px;
+    width: 33%;
+    background-color: #372821;
+    position: absolute;
+    left: -43px;
+    bottom: 35px;
+  }
+}
+.grid-item-b {
+  grid-area: grid-item-b;
+}
+.grid-item-d {
+  grid-area: grid-item-d;
+}
+.grid-item-f {
+  grid-area: grid-item-f;
+}
+.grid-item-c {
+  grid-area: grid-item-c;
+}
 
 
 .top-products-list  {
@@ -305,7 +338,14 @@
       text-align: center;
       cursor: pointer;
       position: relative;
-      overflow: hidden; 
+      overflow: hidden;
+      &::before {
+        content: url(../images/eye.svg);
+        position: absolute;
+        right: 0;
+        top: 0;
+        opacity: 0;
+      } 
       &:after {
         content: '';
         position: absolute; 
@@ -320,9 +360,13 @@
         transition: 0.5s;
         z-index: -1;
       }
-      &:hover:after{    
+      &:hover:after {    
          top: 0px;
-       }
+      }
+      &:hover::before {
+        transition: 1.5s;    
+        opacity: 1;
+      } 
     }
     &-info {
       display: flex;
@@ -352,6 +396,9 @@
     }
     &-btn-all-products {
       border-left: none;
+      position: relative;
+      left: 132px;
+      bottom: 7px;
       &::after {
         content: url(../images/arrow-right.svg);
         position: absolute;

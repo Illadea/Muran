@@ -111,16 +111,26 @@ h2 {
   border: 1px solid #372821;
   cursor: pointer;
   position: relative;
+  box-shadow: 18px 12px 0 #F2F2F2;
+  transition: all 0.5s;
   &::before {
     content:"";
     position: absolute;
     width: 39px;
     height: 1px;
     left: 14px;
-    top: 54px;
+    top: 53.5px;
     background-color: #fff;
+  }
+  &:hover::before  {
+    background-color:#F2F2F2;
   }
   &:focus {
     outline: none;
+  }
+  &:hover {
+    outline: none;
+    box-shadow: 0px 0px 0 #F2F2F2;
+    background-color:#F2F2F2;
   }
 }
