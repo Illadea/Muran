@@ -299,7 +299,7 @@
     background-color: #372821;
     position: absolute;
     left: -44px;
-    top: 65px;
+    top: 69px;
   }
   &::after {
     content: '';
@@ -342,6 +342,10 @@
       cursor: pointer;
       position: relative;
       overflow: hidden;
+      height: 327px;
+      &_big {
+        height: 648px;
+      }
       &::before {
         content: url(../images/eye.svg);
         position: absolute;

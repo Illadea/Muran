@@ -1,10 +1,15 @@
 //////////////////////// balancy.html ////////////////////////
 .category-page {
   padding: 110px 0 110px 30px;
+  &__title-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
   &__title-h2 {
     font-size: 35px;
     line-height: 142.9%;
-    margin-bottom: 120px;
     &::before{
       content:'';
       width: 2px;
@@ -31,4 +36,84 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 50px 65px;
+}
+
+.pagination {
+  font-size: 15px;
+  @extend %Montserrat-Regular;
+  color: #E1E1E1;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  &__prev {
+    border: 1px solid  #372821;
+    width: 57px;
+    height: 57px;
+    background: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 18px 12px 0 #F2F2F2;
+    transition: all 0.5s;
+    margin: 0 25px 0 0;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 31px;
+      background-color: #FFFFFF;
+      position: absolute;
+      top: 15px;
+      right: -1px;
+    }
+    &::after {
+      content: url(../images/arrow-left.svg);
+      position: absolute;
+      top: 15px;
+      right: -23px
+    }
+    &:hover {
+      box-shadow: 0px 0px 0 #F2F2F2;
+      background: #F2F2F2;
+    }
+  }
+  &__next {
+    border: 1px solid  #372821;
+    width: 57px;
+    height: 57px;
+    background: #FFFFFF;
+    position: relative;
+    cursor: pointer;
+    box-shadow: -18px 12px 0 #F2F2F2;
+    transition: all 0.5s;
+    margin: 0 0 0 25px;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 31px;
+      background-color: #FFFFFF;
+      position: absolute;
+      top: 15px;
+      left: -1px;
+    }
+    &::after {
+      content: url(../images/arrow-right.svg);
+      position: absolute;
+      top: 15px;
+      left: -23px
+    }
+    &:hover {
+      box-shadow: 0px 0px 0 #F2F2F2;
+      background: #F2F2F2;
+    }
+  }
+  &__link {
+    margin: 0 13px;
+    &:hover {
+      @extend %Montserrat-Bold;
+      @extend %black;
+    }
+    &_active {
+      @extend %Montserrat-Bold;
+      @extend %black;
+    }
+  }
 }
