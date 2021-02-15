@@ -20,6 +20,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+p {
+  line-height: 216.9%;
+}
 
 ul, 
 li {
@@ -132,5 +135,37 @@ h2 {
     outline: none;
     box-shadow: 0px 0px 0 #F2F2F2;
     background-color:#F2F2F2;
+  }
+}
+
+
+.breadcrumb {
+  background-image: url(../images/breadcrumb-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 183px;
+  &__inner {
+    max-width: 1223px;
+    margin: 0 auto;
+    padding: 69px 0px 56px 30px;
+  }
+  &__list li {
+    display: inline;
+    padding-right: 27px;
+  }
+  &__item {
+    font-size: 20px;
+    line-height: 24px;   
+    @extend %Montserrat-Regular;
+    &::before {
+      content: "/";
+      position: relative;
+      right: 8px;
+    }
+    &_main {
+      font-size: 45px;
+      line-height: 125.4%;
+      @extend %GothamPro-Black;
+    }
   }
 }

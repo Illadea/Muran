@@ -2,6 +2,9 @@
 @import "vars";
 @import "libs";
 @import "global";
+@import "contacts-page";
+@import "delivery-page";
+@import "category-page";
 
 
 //////////////////////// HEADER ////////////////////////
@@ -129,7 +132,7 @@
 
 //////////////////////// MAIN section ////////////////////////
 .main {
-  padding-top: 130px;
+  padding-top: 221px;
 }
 .first-screen {
   &__container {
@@ -322,7 +325,7 @@
 }
 
 
-.top-products-list  {
+.top-products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;

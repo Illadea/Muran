@@ -1,0 +1,35 @@
+//////////////////////// contacts.html ////////////////////////
+.contacts-main-content {
+  padding: 65px 0 187px 30px;
+}
+
+.contacts-map {
+  &__inner {
+    display: flex;
+    padding: 70px 0 70px;
+  }
+  &__map {
+    width: 50%;
+    height: 342px;
+    background-color: #000;
+    margin-right: 120px;
+  }
+  &__info {
+    font-size: 14px;
+    &-inner {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    &-img {
+      background: url(../images/watch.svg) no-repeat;
+      width: 39px;
+      height: 39px;
+      margin-right: 25px;
+    }
+    &-text {
+      border-left: 1px solid #372821;
+      padding-left: 25px;
+    }
+  }
+}
