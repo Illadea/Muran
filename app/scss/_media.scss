@@ -1,4 +1,10 @@
 //////////////////////// GLOBAL ////////////////////////
+@media (max-width: 1599px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 @media (max-width: 1024px) {
   h2 {
     font-size: 50px;
@@ -14,6 +20,9 @@
 }
 
 @media (max-width: 670px) {
+  h1 {
+    font-size: 30px;
+  }
   h2 {
     font-size: 30px;
     &::before{
@@ -25,7 +34,7 @@
 @media (max-width: 328px) {
   h2 {
     &::before{
-      top: -62%;
+      top: -103%;
     }
   }
 }
@@ -53,14 +62,89 @@
 
 
 //////////////////////// MAIN section ////////////////////////
-@media (max-width: 1480px) {
-  .first-screen {
+@media (max-width: 1599px) {
+  .first-screen  {
+    &__container {
+      max-width: 1300px;
+    }
     &__inner {
-      padding: 100px 0 57px 100px;
+      left: 125px;
+      top: 177px;
+    }
+    &__title h1 {
+      margin-bottom: 45px;
+    }
+    &__title h1::before {
+      top: -72px;
+      left: 41px;
+    }
+    &__title h1::after {
+      width: 100px;
+      bottom: 25px;
+      right: -35px;
     }
   }
 }
 
+@media (max-width: 1350px) {
+  .first-screen__inner {
+    left: 26px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .first-screen {
+    &__container {
+      align-items: center;
+    }
+    &__inner {
+      position: inherit;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .first-screen  {
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      max-width: 900px;
+    }
+    &__inner {
+      padding: 104px 0 20px 0px;
+    }
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .first-screen {
+    padding: 0 0 120px 30px;
+      &__title {
+        max-width: 279px;
+      }
+      &__title h1::before {
+        top: -43px;
+        left: 32px;
+        height: 37px;
+      }
+      &__title h1::after {
+        width: 37px;
+        bottom: 19px;
+        left: 135px;
+      }
+  }
+}
+
+@media (max-width: 500px) {
+  .first-screen {
+    &__container {
+      align-items: flex-start;
+    }
+  }
+}
 
 //////////////////////// 1-st section ////////////////////////
 @media (max-width: 1230px) {
@@ -95,7 +179,8 @@
     flex-wrap: wrap;
     &__item {
       height: 162px;
-      width: 290px;
+      min-width: 290px;
+      margin: 10px;
     }
   }
 }
@@ -129,6 +214,9 @@
 }
 
 @media (max-width: 730px) {
+  .top-products-list__item {
+    margin-bottom: 25px;
+  }
   .top-products-list__item-image_big {
     height: 182px;
     width: 293px;
@@ -137,7 +225,7 @@
     }
   }
   .top-products-list__item-btn-all-products {
-    left: 79px;
+    left: 59px;
     bottom: 12px;
   }
   .top-products-list__item-image-title {
@@ -149,7 +237,7 @@
     top: 96px;
   }
   .grid-item-a::after {
-    width: 22%;
+    width: 16%;
     left: -21px;
     bottom: 40px;
   }
