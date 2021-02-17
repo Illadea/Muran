@@ -9,3 +9,11 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+
+/* NAVIGATION, BURGER MENU */
+$(document).ready(function() {
+  $('.menu__hamburger-btn').click(function() {
+      $('.menu__hamburger-btn').toggleClass('open-menu');
+  });
+});
