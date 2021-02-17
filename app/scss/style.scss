@@ -31,7 +31,7 @@
     width: 19px;
     height: 20px;
     cursor: pointer;
-    margin-left: 8px;
+    margin-left: -59px;
   }
   &__search { 
     position: relative;
@@ -74,6 +74,7 @@
     cursor: pointer;
     white-space: nowrap;
     padding-left: 41px;
+    margin-right: 65px;
     line-height: 22px;
     @extend %Montserrat-Regular;
   }
@@ -130,28 +131,22 @@
 }
 
 
+
+
 //////////////////////// MAIN section ////////////////////////
 .main {
   padding-top: 221px;
 }
 .first-screen {
+  padding: 0 0 200px 30px;
   &__container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 30px;
-    display: flex;
-    flex-direction: row-reverse;
-    position: relative;
-  }
-  &__image {
-    width: 80%;
+    background: url(../images/main-slider.png) no-repeat right;
   }
   &__inner {
     max-width: 548px;
-    padding-top: 244px;
-    padding-bottom: 94px;
-    position: absolute;
-    left: 0;
+    padding: 192px 0 87px 172px;
   }
   &__title h1 {
     margin-bottom: 82px;
@@ -162,8 +157,8 @@
       height: 2px;
       background: #372821;
       position: absolute;
-      bottom: 14%;
-      left: 50%;
+      bottom: 37px;
+      right: -67px;
     }
     &::before {
       content:'';
@@ -171,8 +166,8 @@
       height: 67px;
       background: #372821;
       position: absolute;
-      top: -40%;
-      left: 11%;
+      top: -100px;
+      left: 70px;
     }
   }
   &__btn {
@@ -189,8 +184,7 @@
 
 //////////////////////// 1-st section ////////////////////////
 .categories {
-  padding-top: 207px;
-  padding-bottom: 149px;
+  padding-bottom: 200px;
   &__title-h2 {
     display: flex;
     align-items:center;
@@ -279,6 +273,7 @@
 
 //////////////////////// 3-d section ////////////////////////
 .top-category {
+  padding-bottom: 120px;
   &__title-h2 {
     display: flex;
     align-items:center;
@@ -423,7 +418,6 @@
 
 //////////////////////// FOOTER ////////////////////////
 .footer {
-  padding-top: 136px;
   padding-bottom: 50px;
   &__inner {
     display: flex;
@@ -436,14 +430,15 @@
       @extend %Montserrat-Bold;
       margin-bottom: 22px;
       position: relative;
+      display: inline-block;
       &::after {
         content:'';
         width: 67px;
         height: 2px;
         background: #372821;
         position: absolute;
-        bottom: 48%;
-        left: 50%;
+        bottom: 28px;
+        right: -98px;
       }
     }
     &-subtitle {
@@ -458,11 +453,12 @@
       display: flex;
       align-items: center;
       &-item {
-        padding: 22px 22px 17px 22px;
         border: 2px solid #372821;
         margin-right: 31px;
         position: relative;
         cursor: pointer;
+        width: 67px;
+        height: 67px;
         &:last-child {
           margin-right: 0;
         }
@@ -476,7 +472,7 @@
           width: 30px;
           height: 2px;
           left: 14px;
-          top: 68px;
+          top: 63px;
           background-color: #fff;
         }
       }
@@ -498,9 +494,27 @@
       color: #969696;
       @extend %Montserrat-Regular;
       justify-content: space-between;
+      flex-wrap: wrap;
+      &-item {
+        padding: 0 20px 20px 0;
+      }
       & a:hover  {
         @extend %black;
       }
     }
   }
 }
+
+.instagram-logo {
+ background: url(../images/instagram-logo.svg) no-repeat center;
+}
+
+.twitter-logo {
+  background: url(../images/twitter-logo.svg) no-repeat center;
+}
+
+.facebook-logo {
+  background: url(../images/facebook-logo.svg) no-repeat center;
+}
+
+@import "media";
