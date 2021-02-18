@@ -1,6 +1,6 @@
 //////////////////////// balancy.html ////////////////////////
 .category-page {
-  padding: 110px 0 110px 30px;
+  padding: 110px 0 110px 0;
   &__title-inner {
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,6 @@
 .category-products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 50px 65px;
 }
 
@@ -116,4 +115,8 @@
       @extend %black;
     }
   }
+}
+
+.pagination.pagination__mobile {
+  display: none;
 }
