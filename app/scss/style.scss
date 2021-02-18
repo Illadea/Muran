@@ -78,14 +78,14 @@
     line-height: 22px;
     @extend %Montserrat-Regular;
   }
+  &__hamburger-btn {
+    display: none;
+  }
 }
 
 .menu {
   background: #F2EFEB;
   @extend %Montserrat-Regular;
-  &__hamburger-btn {
-    display: none;
-  }
   &__list {
     display: flex;
     justify-content: center;
@@ -113,7 +113,8 @@
     & li {
       &:hover{
         background: #F8F8F8;
-        @extend %Montserrat-Bold;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
       }
       & a {
         display: block;

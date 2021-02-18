@@ -102,6 +102,10 @@ h2 {
   }
 }
 
+.fixed-page {
+  overflow: hidden; /*запрещаем прокручивание страницы при открытом меню*/
+}
+
 .container {
   max-width: 1223px;
   margin: 0 auto;
