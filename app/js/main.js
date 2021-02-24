@@ -7,6 +7,9 @@ window.onscroll = function() {
   } else {
     document.getElementById("header").style.top = "-175px";
   }
+  if (window.pageYOffset === 0) {
+    document.getElementById("header").style.top = "0px";
+  }
   prevScrollpos = currentScrollPos;
 }
 
@@ -20,11 +23,3 @@ $(document).ready(function() {
   });
 });
 
-
-// else {
-//   if( screen.width < 1100) {
-//     document.getElementById("header").style.top = "-1px";
-//   } else {
-//     document.getElementById("header").style.top = "-175px";
-//   }
-// }
