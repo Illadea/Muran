@@ -1,11 +1,11 @@
 # Muran
-Landing page for Fixper company.
+Online store of Muran's cosmetics.
 To view a live demo, [click here](https://sinicynapolina.ru/muran/).
 
 ## How To Use
 If you are not installed Node.js, follow the instructions [here](https://nodejs.org/en/).
 
-From your command line, clone and run Fixper:
+From your command line, clone and run:
 
 ```bash
 # Clone this repository
